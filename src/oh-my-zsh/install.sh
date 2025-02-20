@@ -3,8 +3,10 @@ set -e
 
 source functions.sh
 
-SET_LOCALE=${SETLOCALE:-true}
+DISABLE_AUTO_UPDATE=${DISABLEAUTOUPDATE:-true}
+DISABLE_UPDATE_PROMPT=${DISABLEUPDATEPROMPT:-true}
 SET_DEFAULT_USER_TO_REMOTE_USER=${SETDEFAULTUSERTOREMOTEUSER:-true}
+SET_LOCALE=${SETLOCALE:-true}
 STRIP_WORKSPACES_FROM_PROMPT=${STRIPWORKSPACESFROMPROMPT:-false}
 
 env >> ~/env.txt
@@ -48,6 +50,10 @@ fi
 
 # set the theme
 upsert_config_option "^ZSH_THEME=.*$" "ZSH_THEME=\"${THEME}\"" "${ZSH_RC_FILE}"
+
+# set the auto update and update prompt
+upsert_config_option "^DISABLE_AUTO_UPDATE=.*$" "DISABLE_AUTO_UPDATE=\"${DISABLE_AUTO_UPDATE}\"" "${ZSH_RC_FILE}"
+upsert_config_option "^DISABLE_UPDATE_PROMPT=.*$" "DISABLE_UPDATE_PROMPT=\"${DISABLE_UPDATE_PROMPT}\"" "${ZSH_RC_FILE}"
 
 # set the default user to the container remote user if SETDEFAULTUSERTOREMOTEUSER is true.
 if [ "${SET_DEFAULT_USER_TO_REMOTE_USER}" = "true" ]; then

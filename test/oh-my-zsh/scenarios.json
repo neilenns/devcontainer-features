@@ -64,5 +64,37 @@
         "stripWorkspacesFromPrompt": false
       }
     }
+  },
+  "disable_auto_update_false": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "disableAutoUpdate": false
+      }
+    }
+  },
+  "disable_update_prompt_false": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "disableUpdatePrompt": false
+      }
+    }
+  },
+  "disable_auto_update_true": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "disableAutoUpdate": true
+      }
+    }
+  },
+  "disable_update_prompt_true": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "disableUpdatePrompt": true
+      }
+    }
   }
 }

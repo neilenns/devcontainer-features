@@ -79,3 +79,17 @@ assert_prompt_dir_does_not_exist() {
     exit 1
   fi
 }
+
+assert_auto_update_is() {
+  value=$1
+  if ! grep -E -q "^DISABLE_AUTO_UPDATE=\"$value\"" ~/.zshrc; then
+    exit 1
+  fi
+}
+
+assert_update_prompt_is() {
+  value=$1
+  if ! grep -E -q "^DISABLE_UPDATE_PROMPT=\"$value\"" ~/.zshrc; then
+    exit 1
+  fi
+}
