@@ -70,7 +70,6 @@ assert_configured_default_user_is_not_set() {
 
 assert_prompt_dir_exists() {
   if ! grep -E -q "^prompt_dir" ~/.zshrc; then
-    echo "prompt_dir" was not set in ~/.zshrc
     exit 1
   fi
 }
