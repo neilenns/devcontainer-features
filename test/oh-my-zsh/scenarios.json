@@ -1,0 +1,68 @@
+{
+  "using_non_root_remote_user": {
+    "image": "debian:bookworm-slim",
+    "features": {
+      "ghcr.io/nils-geistmann/devcontainers-features/create-remote-user:latest": {},
+      "oh-my-zsh": {}
+    },
+    "remoteUser": "remote"
+  },
+  "using_theme_robbyrussell": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "theme": "robbyrussell"
+      }
+    }
+  },
+  "configuring_plugins_git_and_docker": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "plugins": "git docker"
+      }
+    }
+  },
+  "create_zshrc_file_if_missing": {
+    "image": "debian:bookworm-slim",
+    "features": {
+      "oh-my-zsh": {
+        "theme": "avit",
+        "plugins": "git docker"
+      }
+    }
+  },
+  "using_theme_agnoster_set_remote_user": {
+    "image": "debian:bookworm-slim",
+    "features": {
+      "ghcr.io/nils-geistmann/devcontainers-features/create-remote-user:latest": {},
+      "oh-my-zsh": {
+      }
+    },
+    "remoteUser": "remote"
+  },
+  "using_theme_agnoster_do_not_set_remote_user": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "setDefaultUserToRemoteUser": false
+      }
+    }
+  },
+  "strip_workspace_from_prompt_true": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "stripWorkspacesFromPrompt": true
+      }
+    }
+  },
+  "strip_workspace_from_prompt_false": {
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "oh-my-zsh": {
+        "stripWorkspacesFromPrompt": false
+      }
+    }
+  }
+}
