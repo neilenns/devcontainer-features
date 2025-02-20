@@ -5,8 +5,42 @@
   "description": "Installs zsh and OhMyZsh, sets zsh as the default shell for the remote user, and configures OhMyZsh based on the feature settings.",
   "licenseURL": "https://github.com/neilenns/devcontainers-features/blob/main/LICENSE",
   "options": {
+    "plugins": {
+      "description": "A space separated list of plugins to activate.",
+      "type": "string",
+      "default": "git",
+      "proposals": [
+        "git docker",
+        "rails git textmate ruby lighthouse"
+      ]
+    },
+    "desiredLocale": {
+      "description": "The locale that should be set when `setLocale` is true.",
+      "type": "string",
+      "default": "en_US.UTF-8 UTF-8",
+      "proposals": [
+        "en_US.UTF-8 UTF-8",
+        "de_DE.UTF-8 UTF-8",
+        "es_ES.UTF-8 UTF-8"
+      ]
+    },
+    "disableAutoUpdate": {
+      "description": "Disable automatic updates of OhMyZsh.",
+      "type": "boolean",
+      "default": true
+    },
+    "disableUpdatePrompt": {
+      "description": "Disable the update prompt of OhMyZsh.",
+      "type": "boolean",
+      "default": true
+    },
     "setDefaultUserToRemoteUser": {
       "description": "Set the theme's `DEFAULT_USER` to the container's `remoteUser`.",
+      "type": "boolean",
+      "default": true
+    },
+    "setLocale": {
+      "description": "Install required locales package and set locale.",
       "type": "boolean",
       "default": true
     },
@@ -22,30 +56,6 @@
       "proposals": [
         "robbyrussell",
         "agnoster"
-      ]
-    },
-    "plugins": {
-      "description": "A space separated list of plugins to activate.",
-      "type": "string",
-      "default": "git",
-      "proposals": [
-        "git docker",
-        "rails git textmate ruby lighthouse"
-      ]
-    },
-    "setLocale": {
-      "description": "Install required locales package and set locale.",
-      "type": "boolean",
-      "default": true
-    },
-    "desiredLocale": {
-      "description": "The locale that should be set when `setLocale` is true.",
-      "type": "string",
-      "default": "en_US.UTF-8 UTF-8",
-      "proposals": [
-        "en_US.UTF-8 UTF-8",
-        "de_DE.UTF-8 UTF-8",
-        "es_ES.UTF-8 UTF-8"
       ]
     }
   },
