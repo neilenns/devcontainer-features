@@ -1,7 +1,7 @@
 {
   "name": "oh-my-zsh",
   "id": "oh-my-zsh",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "Installs zsh and OhMyZsh, sets zsh as the default shell for the remote user, and configures OhMyZsh based on the feature settings.",
   "licenseURL": "https://github.com/neilenns/devcontainers-features/blob/main/LICENSE",
   "options": {
