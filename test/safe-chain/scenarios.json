@@ -1,5 +1,5 @@
 {
-  "catch_unsecure_install": {
+  "test_install": {
     "image": "mcr.microsoft.com/devcontainers/typescript-node:24",
     "features": {
       "safe-chain": {}
