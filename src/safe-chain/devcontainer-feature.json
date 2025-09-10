@@ -1,0 +1,7 @@
+{
+  "name": "safe-chain",
+  "id": "safe-chain",
+  "version": "1.0.0",
+  "description": "Installs Aikido Safe Chain.",
+  "licenseURL": "https://github.com/neilenns/devcontainers-features/blob/main/LICENSE"
+}

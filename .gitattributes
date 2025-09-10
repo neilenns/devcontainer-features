@@ -1,0 +1,25 @@
+# Git attributes to enforce consistent line endings across platforms
+# Default: let Git decide which files are text and normalize them on commit
+* text=auto
+
+# Explicitly enforce LF for scripts and common text formats (good for CI / POSIX tools)
+*.sh     text eol=lf
+*.md     text eol=lf
+*.json   text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.ts     text eol=lf
+*.js     text eol=lf
+*.py     text eol=lf
+*.java   text eol=lf
+
+# Binary files -- do not attempt to normalize
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.zip    binary
+*.gz     binary
+
+# End of file
