@@ -2,7 +2,6 @@
 set -e
 
 source dev-container-features-test-lib
-source test_functions.sh
 
 assert_node_is_safe_chain() {
 	output=$(type node 2>&1 || true)
